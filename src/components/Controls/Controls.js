@@ -13,7 +13,9 @@ export default function Controls({ head, setHead, middle, setMiddle, pants, setP
   };
   return (
     <div className="controller">
+      <h2 className="header"> Create your character</h2>
       <div className="form-control">
+        <label>Head: </label>
         <select value={head} onChange={headHandler}>
           <option value="bird">Bird</option>
           <option value="dog">Dog</option>
@@ -21,7 +23,8 @@ export default function Controls({ head, setHead, middle, setMiddle, pants, setP
           <option value="horse">Horse</option>
         </select>
       </div>
-      <div>
+      <div className="form-control">
+        <label>Middle: </label>
         <select value={middle} onChange={middleHandler}>
           <option value="blue">Blue</option>
           <option value="dress">Dress</option>
@@ -29,7 +32,8 @@ export default function Controls({ head, setHead, middle, setMiddle, pants, setP
           <option value="red">Red</option>
         </select>
       </div>
-      <div>
+      <div className="form-control">
+        <label>Pants :</label>
         <select value={pants} onChange={pantsHandler}>
           <option value="blue">Blue</option>
           <option value="dog">Dog</option>
