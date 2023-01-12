@@ -1,0 +1,10 @@
+.Gloria {
+  font-family: 'Gloria+Hallelujah', cursive;
+}
+.Home {
+  width: 700px;
+  background-color: antiquewhite;
+  display: grid;
+  height: auto;
+  color: rgb(136, 88, 88);
+}
