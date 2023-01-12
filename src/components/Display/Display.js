@@ -1,7 +1,7 @@
 import React from 'react';
 import './Display.css';
 
-export default function Display({ head, middle }) {
+export default function Display({ head, middle, pants }) {
   return (
     <>
       <></>
@@ -10,6 +10,9 @@ export default function Display({ head, middle }) {
       </div>
       <div className="Middle">
         <img src={`/character/${middle}-middle.png`} alt={`${middle}`} />
+      </div>
+      <div className="Pants">
+        <img src={`/character/${pants}-pants.png`} alt={`${pants}`} />
       </div>
     </>
   );
