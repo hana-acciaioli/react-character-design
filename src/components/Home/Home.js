@@ -6,15 +6,16 @@ import Display from '../Display/Display.js';
 
 export default function Home() {
   const [head, setHead] = useState('bird');
+  const [middle, setMiddle] = useState('blue');
   return (
     <div className="Home">
       <h1 className="Monoton">Character Designer</h1>
       <div className="body">
         <div className="Controller">
-          <Controls head={head} setHead={setHead} />
+          <Controls head={head} setHead={setHead} middle={middle} setMiddle={setMiddle} />
         </div>
         <div className="Display">
-          <Display head={head} />
+          <Display head={head} middle={middle} />
         </div>
       </div>
     </div>
