@@ -5,9 +5,10 @@
   border-radius: 10px;
   padding: 15px;
   margin: 10px 0 10px 20px;
+  list-style-type: none;
 }
 
-#phrase-list li:after {
+.phrase-list:after {
   content: '';
   position: absolute;
   left: 0;
@@ -15,7 +16,7 @@
   width: 0;
   height: 0;
   border: 20px solid transparent;
-  border-right-color: #00aabb;
+  border-right-color: aliceblue;
   border-left: 0;
   border-bottom: 0;
   margin-top: -10px;
