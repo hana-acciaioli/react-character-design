@@ -10,17 +10,29 @@ export default function Controls({
   pants,
   setPants,
   setCatchphrases,
+  setCountHead,
+  setCountMiddle,
+  setCountPants,
 }) {
   const [inputValue, setInputValue] = useState('');
 
   const headHandler = (event) => {
     setHead(event.target.value);
+    setCountHead((currentState) => {
+      return currentState + 1;
+    });
   };
   const middleHandler = (event) => {
     setMiddle(event.target.value);
+    setCountMiddle((currentState) => {
+      return currentState + 1;
+    });
   };
   const pantsHandler = (event) => {
     setPants(event.target.value);
+    setCountPants((currentState) => {
+      return currentState + 1;
+    });
   };
   // const catchphraseInputHandler = (event) => {
   //   setInputValue(event.target.value);
@@ -65,7 +77,7 @@ export default function Controls({
         <label>Make a catchphrase: </label>
         <input
           value={inputValue}
-          style={{ height: '150px' }}
+          // style={{ height: '150px' }}
           onChange={(e) => setInputValue(e.target.value)}
         />
         <button onClick={addCatchphraseHandler}>Add</button>
