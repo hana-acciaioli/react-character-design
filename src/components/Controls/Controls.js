@@ -39,9 +39,14 @@ export default function Controls({
   // };
 
   const addCatchphraseHandler = () => {
-    setCatchphrases((currentState) => [...currentState, inputValue]);
-    setInputValue('');
+    if (inputValue === '') {
+      alert('please enter a valid catchphrase');
+    } else {
+      setCatchphrases((currentState) => [...currentState, inputValue]);
+      setInputValue('');
+    }
   };
+
   return (
     <div className="controller">
       <h3 className="header"> Create your character</h3>
@@ -75,11 +80,7 @@ export default function Controls({
 
       <div className="form-control">
         <label>Make a catchphrase: </label>
-        <input
-          value={inputValue}
-          // style={{ height: '150px' }}
-          onChange={(e) => setInputValue(e.target.value)}
-        />
+        <input value={inputValue} onChange={(e) => setInputValue(e.target.value)} />
         <button onClick={addCatchphraseHandler}>Add</button>
       </div>
     </div>

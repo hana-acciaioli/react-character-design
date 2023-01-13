@@ -1,7 +1,7 @@
-#phrase-list li {
+.phrase-list {
   position: relative;
-  background: #00aabb;
-  color: white;
+  background-color: aliceblue;
+  color: rgb(27, 25, 25);
   border-radius: 10px;
   padding: 15px;
   margin: 10px 0 10px 20px;

@@ -1,6 +1,8 @@
 .Scoreboard {
-  background-color: white;
+  background-color: aliceblue;
   height: 200px;
   position: relative;
-  width: 100%;
+  border-radius: 15px;
+  padding: 30px;
+  margin: 20px;
 }
