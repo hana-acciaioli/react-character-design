@@ -5,11 +5,11 @@ export default function CatchphraseDisplay({ catchphrases }) {
     <div>
       <h3>Catchphrases</h3>
       <ul>
-        {catchphrases.map((booger) => {
+        {catchphrases.map((value, index) => {
           return (
-            <li className="phrase-list" key={booger}>
+            <li className="phrase-list" key={index}>
               {' '}
-              {booger}{' '}
+              {value}
             </li>
           );
         })}
