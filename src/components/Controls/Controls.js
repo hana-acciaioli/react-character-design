@@ -1,7 +1,18 @@
 import React from 'react';
 import './Controls.css';
+import { useState } from 'react';
 
-export default function Controls({ head, setHead, middle, setMiddle, pants, setPants }) {
+export default function Controls({
+  head,
+  setHead,
+  middle,
+  setMiddle,
+  pants,
+  setPants,
+  setCatchphrases,
+}) {
+  const [inputValue, setInputValue] = useState('');
+
   const headHandler = (event) => {
     setHead(event.target.value);
   };
@@ -11,9 +22,17 @@ export default function Controls({ head, setHead, middle, setMiddle, pants, setP
   const pantsHandler = (event) => {
     setPants(event.target.value);
   };
+  // const catchphraseInputHandler = (event) => {
+  //   setInputValue(event.target.value);
+  // };
+
+  const addCatchphraseHandler = () => {
+    setCatchphrases((currentState) => [...currentState, inputValue]);
+    setInputValue('');
+  };
   return (
     <div className="controller">
-      <h2 className="header"> Create your character</h2>
+      <h3 className="header"> Create your character</h3>
       <div className="form-control">
         <label>Head: </label>
         <select value={head} onChange={headHandler}>
@@ -40,6 +59,16 @@ export default function Controls({ head, setHead, middle, setMiddle, pants, setP
           <option value="leg">Leg</option>
           <option value="white">White</option>
         </select>
+      </div>
+
+      <div className="form-control">
+        <label>Make a catchphrase: </label>
+        <input
+          value={inputValue}
+          style={{ height: '150px' }}
+          onChange={(e) => setInputValue(e.target.value)}
+        />
+        <button onClick={addCatchphraseHandler}>Add</button>
       </div>
     </div>
   );
