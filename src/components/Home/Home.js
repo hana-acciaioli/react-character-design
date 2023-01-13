@@ -31,6 +31,7 @@ export default function Home() {
             setCountMiddle={setCountMiddle}
             setCountPants={setCountPants}
           />
+          <Scoreboard countHead={countHead} countMiddle={countMiddle} countPants={countPants} />
         </div>
         <div className="Display">
           <Display head={head} middle={middle} pants={pants} catchphrases={catchphrases} />
@@ -38,7 +39,6 @@ export default function Home() {
         <div>
           <CatchphraseDisplay catchphrases={catchphrases} />
         </div>
-        <Scoreboard countHead={countHead} countMiddle={countMiddle} countPants={countPants} />
       </div>
     </div>
   );

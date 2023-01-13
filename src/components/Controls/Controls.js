@@ -47,6 +47,12 @@ export default function Controls({
     }
   };
 
+  const handleKeyPress = (e) => {
+    if (e.keyCode === 13) {
+      addCatchphraseHandler();
+    }
+  };
+
   return (
     <div className="controller">
       <h3 className="header"> Create your character</h3>
@@ -80,7 +86,11 @@ export default function Controls({
 
       <div className="form-control">
         <label>Make a catchphrase: </label>
-        <input value={inputValue} onChange={(e) => setInputValue(e.target.value)} />
+        <input
+          value={inputValue}
+          onChange={(e) => setInputValue(e.target.value)}
+          onKeyDown={handleKeyPress}
+        />
         <button onClick={addCatchphraseHandler}>Add</button>
       </div>
     </div>
