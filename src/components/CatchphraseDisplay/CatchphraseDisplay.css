@@ -1,0 +1,24 @@
+.phrase-list {
+  position: relative;
+  background-color: aliceblue;
+  color: rgb(27, 25, 25);
+  border-radius: 10px;
+  padding: 15px;
+  margin: 10px 0 10px 20px;
+  list-style-type: none;
+}
+
+.phrase-list:after {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 50%;
+  width: 0;
+  height: 0;
+  border: 20px solid transparent;
+  border-right-color: aliceblue;
+  border-left: 0;
+  border-bottom: 0;
+  margin-top: -10px;
+  margin-left: -20px;
+}

@@ -1,0 +1,38 @@
+.controller {
+  background-color: aliceblue;
+  padding: 30px;
+  padding-bottom: 30px;
+  margin: 20px;
+  border-radius: 15px;
+}
+
+.form-control {
+  margin-top: 20px;
+  margin-left: 20px;
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.header {
+  position: absolute;
+  top: 100px;
+}
+
+input[type='text'] + label,
+select + label,
+textarea + label,
+.form-control > label {
+  position: relative;
+  top: 0;
+  left: 0;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+input[type='text']:focus,
+select:focus,
+textarea:focus {
+  border: none;
+  box-shadow: 0 0 3px 2px var(--color5);
+  outline: none;
+}
