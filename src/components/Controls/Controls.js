@@ -34,10 +34,6 @@ export default function Controls({
       return currentState + 1;
     });
   };
-  // const catchphraseInputHandler = (event) => {
-  //   setInputValue(event.target.value);
-  // };
-
   const addCatchphraseHandler = () => {
     if (inputValue === '') {
       alert('please enter a valid catchphrase');
